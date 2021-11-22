@@ -34,28 +34,29 @@ which is a variant of Markdown that allows you to render code inside the
 lesson. Please refer to the [lesson
 example](https://carpentries.github.io/lesson-example) for full documentation.
 
+## Creating your first lesson
 
 You can create a new lesson by loading {sandpaper} and running `create_lesson()`:
 
 ```{r}
-library("sandpaper")
-create_lesson("my-lesson", open = FALSE)
+sandpaper::create_lesson("my-lesson", open = FALSE)
 ```
+
+## Building your lesson
 
 Now that we have a lesson, we can build it with `build_lesson()`, which will
 produce a lot of output, but when we build it again, it will produce 
 significantly less output.
 
 ```{r}
-build_lesson("my-lesson", preview = FALSE, quiet = FALSE)
-build_lesson("my-lesson", preview = FALSE, quiet = FALSE)
+sandpaper::build_lesson("my-lesson", preview = FALSE, quiet = FALSE)
+sandpaper::build_lesson("my-lesson", preview = FALSE, quiet = FALSE)
 ```
-
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
  - Use `sandpaper::create_lesson()` to create a lesson
- - Use `manage_dependencies()` to manually add dependencies to a lesson
+ - Use `sandpaper::manage_deps()` to manually add dependencies to a lesson
  - Preview your lesson with `build_lesson()`
  
 ::::::::::::::::::::::::::::::::::::::::::::::::
